@@ -1,0 +1,27 @@
+/* Animação suave para as tarefas */
+.todo-item {
+    transition: all 0.2s ease-in-out;
+}
+
+/* O botão de deletar fica escondido até o mouse passar por cima */
+.delete-btn {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.todo-item:hover .delete-btn {
+    opacity: 1;
+}
+
+/* Para garantir que o botão de deletar apareça no celular, onde não tem mouse */
+@media (max-width: 768px) {
+    .delete-btn {
+        opacity: 1;
+    }
+}
+
+/* Estilo para a aba do filtro que estiver selecionada */
+.filter-btn.active {
+    color: #4f46e5; /* indigo-600 */
+    font-weight: 600;
+}
